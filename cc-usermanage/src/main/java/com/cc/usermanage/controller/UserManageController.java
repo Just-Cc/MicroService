@@ -1,7 +1,6 @@
 package com.cc.usermanage.controller;
 
 import com.cc.common.pojo.User;
-import com.cc.itemmanage.feign.ItemFeign;
 import com.cc.usermanage.service.UserManageService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,11 +15,9 @@ public class UserManageController {
 
     @Autowired
     UserManageService userManageService;
-    @Autowired
-    private ItemFeign client;
 
-    @GetMapping("queryUser")
-    public String queryUser(String id) {
+    @GetMapping("queryUser/{id}")
+    public String queryUser(@PathVariable("id") String id) {
         log.info("当前查询的id为：" + id);
         return userManageService.queryUser(id);
     }
@@ -47,6 +44,6 @@ public class UserManageController {
     @GetMapping("hahaha")
     public String hahaha(String id){
 
-        return client.queryItem(id);
+        return "haha";
     }
 }

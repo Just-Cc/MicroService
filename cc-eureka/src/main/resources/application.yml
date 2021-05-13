@@ -4,7 +4,7 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8080/eureka/
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: false #不向注册中心注册自己
+    fetch-registry: false #启动时不检索服务
   server:
     enable-self-preservation: false
