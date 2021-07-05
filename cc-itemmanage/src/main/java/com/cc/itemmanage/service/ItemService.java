@@ -11,4 +11,6 @@ public interface ItemService {
     String updateItem(Item item);
 
     String deleteItem(String id);
+
+    Item likeItem(String value);
 }

@@ -13,4 +13,6 @@ public interface ItemMapper {
     void updateItem(Item item);
 
     void deleteItem(Integer id);
+
+    Item likeItem(String value);
 }

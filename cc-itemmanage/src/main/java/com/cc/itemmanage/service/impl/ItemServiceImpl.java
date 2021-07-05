@@ -62,4 +62,9 @@ public class ItemServiceImpl implements ItemService {
         }
         return result;
     }
+
+    @Override
+    public Item likeItem(String value) {
+        return itemMapper.likeItem(value);
+    }
 }

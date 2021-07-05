@@ -4,6 +4,10 @@
 
 <mapper namespace="com.cc.itemmanage.mapper.ItemMapper">
     <select id="queryItem" resultType="com.cc.common.pojo.Item">
-        select * from item where item_id = #{id}
+        select item_id as itemId,item_name as itemName,description,mark from item where item_id = #{id}
+    </select>
+
+    <select id="likeItem" resultType="com.cc.common.pojo.Item">
+        select * from item where item_name like "%"#{value}"%"
     </select>
 </mapper>

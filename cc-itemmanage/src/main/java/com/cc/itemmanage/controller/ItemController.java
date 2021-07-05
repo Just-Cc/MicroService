@@ -39,4 +39,10 @@ public class ItemController{
 
         return itemService.deleteItem(id);
     }
+
+    @GetMapping("like")
+    public Item likeItem(String value){
+
+        return itemService.likeItem(value);
+    }
 }
